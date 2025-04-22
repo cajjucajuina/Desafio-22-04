@@ -14,7 +14,7 @@
   
   /* Dark mode variables */
   [data-theme="dark"] {
-    --primary-bg: #1a1a1a;
+    --primary-bg: #153e0d;
     --primary-text: #ffffff;
     --secondary-bg: #333333;
     --input-bg: #555555;
