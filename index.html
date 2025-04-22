@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-card-body">
+        <!-- Header -->
+        <div class="login-header">
+          <div class="login-logo">
+            <i class="ph ph-lock-key text-primary text-2xl"></i>
+          </div>
+          <h1 class="login-title">Login to your account</h1>
+          <p class="login-subtitle">Enter your credentials to access your account</p>
+        </div>
+
+        <!-- Form -->
+        <form class="login-form">
+          <!-- Email field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-with-icon">
+              <div class="input-icon">
+                <i class="ph ph-envelope"></i>
+              </div>
+              <input type="email" id="email" placeholder="name@example.com" class="input-field" required>
+            </div>
+          </div>
+
+          <!-- Password field -->
+          <div class="form-group">
+            <div class="password-header">
+              <label for="password" class="form-label">Password</label>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+            <div class="input-with-icon">
+              <div class="input-icon">
+                <i class="ph ph-lock"></i>
+              </div>
+              <input type="password" id="password" placeholder="••••••••" class="input-field" required>
+            </div>
+          </div>
+
+          <!-- Remember me -->
+          <div class="remember-me">
+            <input type="checkbox" id="remember" class="remember-checkbox">
+            <label for="remember" class="remember-label">Remember me</label>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="login-button">Sign in</button>
+        </form>
+
+        <!-- Divider -->
+        <div class="divider-container">
+          <div class="divider-line">
+            <span class="divider-text">Or continue with</span>
+          </div>
+        </div>
+
+        <!-- Social login -->
+        <div class="social-login">
+          <a href="#" class="social-button">
+            <i class="ph ph-facebook-logo"></i>
+          </a>
+          <a href="#" class="social-button">
+            <i class="ph ph-twitter-logo"></i>
+          </a>
+          <a href="#" class="social-button">
+            <i class="ph ph-google-logo"></i>
+          </a>
+        </div>
+
+        <!-- Sign up link -->
+        <div class="signup-container">
+          <p class="signup-text">
+            Don't have an account?
+            <a href="#" class="signup-link">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

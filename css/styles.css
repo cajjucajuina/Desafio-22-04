@@ -1,0 +1,187 @@
+/* Base Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for login page using Tailwind's @layer */
+@layer components {
+  /* Main container */
+  .login-container {
+    @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-100 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4;
+  }
+
+  /* Login card */
+  .login-card {
+    @apply w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden;
+  }
+
+  .login-card-body {
+    @apply p-8;
+  }
+
+  /* Header section */
+  .login-header {
+    @apply flex flex-col items-center mb-8;
+  }
+
+  .login-logo {
+    @apply w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4;
+  }
+
+  .login-logo-icon {
+    @apply text-primary text-3xl;
+  }
+
+  .login-title {
+    @apply text-2xl font-bold text-gray-900 dark:text-white text-center;
+  }
+
+  .login-subtitle {
+    @apply text-sm text-gray-500 dark:text-gray-400 text-center mt-2;
+  }
+
+  /* Form elements */
+  .login-form {
+    @apply space-y-6;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  /* Input with icon */
+  .input-with-icon {
+    @apply relative;
+  }
+
+  .input-icon {
+    @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 dark:text-gray-400;
+  }
+
+  .input-field {
+    @apply w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors;
+  }
+
+  /* Password field header with forgot link */
+  .password-header {
+    @apply flex items-center justify-between;
+  }
+
+  .forgot-link {
+    @apply text-sm text-primary hover:text-primary-focus dark:text-primary-content dark:hover:text-primary-content/80 hover:underline;
+  }
+
+  /* Remember me checkbox */
+  .remember-me {
+    @apply flex items-center space-x-2 mt-4;
+  }
+
+  .remember-checkbox {
+    @apply h-4 w-4 text-primary focus:ring-primary border-gray-300 dark:border-gray-600 rounded;
+  }
+
+  .remember-label {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  /* Login button */
+  .login-button {
+    @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors;
+  }
+
+  /* Divider */
+  .divider-container {
+    @apply relative mt-8;
+  }
+
+  .divider-line {
+    @apply absolute inset-0 flex items-center;
+  }
+
+  .divider-line-inner {
+    @apply w-full border-t border-gray-300 dark:border-gray-600;
+  }
+
+  .divider-text {
+    @apply relative flex justify-center text-xs uppercase;
+  }
+
+  .divider-text-inner {
+    @apply px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400;
+  }
+
+  /* Social login */
+  .social-login {
+    @apply mt-6 grid grid-cols-3 gap-3;
+  }
+
+  .social-button {
+    @apply w-full inline-flex justify-center py-2 px-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-700 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors;
+  }
+
+  /* Sign up section */
+  .signup-container {
+    @apply mt-6 text-center;
+  }
+
+  .signup-text {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  .signup-link {
+    @apply text-primary hover:text-primary-focus dark:text-primary-content dark:hover:text-primary-content/80 hover:underline;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .login-card {
+      @apply max-w-full;
+    }
+
+    .social-login {
+      @apply grid-cols-1;
+    }
+  }
+
+  /* Error states */
+  .input-error {
+    @apply border-red-500 focus:ring-red-500;
+  }
+
+  .error-message {
+    @apply mt-1 text-sm text-red-500 dark:text-red-400;
+  }
+
+  /* Success states */
+  .input-success {
+    @apply border-green-500 focus:ring-green-500;
+  }
+
+  /* Loading state for button */
+  .button-loading {
+    @apply opacity-70 cursor-not-allowed;
+  }
+
+  /* Animation for loading */
+  .spin-loader {
+    @apply animate-spin h-5 w-5 mr-2;
+  }
+}
+
+/* Custom properties for Daisy UI theme integration */
+:root {
+  --primary: 222 80% 50%;
+  --primary-focus: 222 80% 45%;
+  --primary-content: 210 40% 98%;
+}
+
+/* Dark mode adjustments */
+.dark {
+  --primary: 217 91% 60%;
+  --primary-focus: 217 91% 55%;
+  --primary-content: 210 40% 98%;
+}
